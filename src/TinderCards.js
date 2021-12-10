@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TinderCard from "react-tinder-card";
+import database from "./Firebase";
 import './TinderCards.css';
 
 function TinderCards() {
-    const [people, setPeople] = useState([
-
-        {
-            name: 'Mia Khalifa',
-            url: 'https://es.web.img3.acsta.net/r_1280_720/pictures/17/01/20/12/42/192403.jpg'
-        },
-        {
-            name: 'Lana Rhoades',
-            url: 'https://horapiko.com/wp-content/uploads/2020/10/image-15.png'
-        }
-
-
-    ]) // Es lo mismo que: // const people = []
-
+    const [people, setPeople] = useState([]) 
+    
+    // Es lo mismo que: // const people = []
+    
+    //Piece of code which runs based on a condition
+    useEffect(() => {
+        
+        //this will run ONCE when the componen loadas, and never again
+        database.collection('people').onSnapshot(snapshot => (
+            setPeople(snapshot.docs.map(doc => doc.data()))
+        ))
+    
+    }, [people])
 
 
     // Mal
