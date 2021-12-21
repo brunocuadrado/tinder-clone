@@ -13,7 +13,7 @@ function Header () {
             </IconButton>
             <img 
             className="header__logo" // BEM: componente en el que estas + __ + elemento <<<<<
-            src="https://cdn-icons.flaticon.com/png/512/4401/premium/4401438.png?token=exp=1639065741~hmac=cca7b61ff75e9091c9afc22d6b25d3a9" 
+            src="https://cdn2.iconfinder.com/data/icons/social-media-icons-23/800/tinder-512.png" 
             alt="tinder logo"
             />
             <IconButton>
