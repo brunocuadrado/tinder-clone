@@ -8,13 +8,14 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header/>
       <Router>
         <Switch>
           <Route path="/chat">
+            <Header backButton="/"/>
             <h1>chat page</h1>
           </Route>
           <Route path="/">
+            <Header/>
             <TinderCards/> {/* La default Page siempre al final, porque js lee secuencialmente */}
             <SwipeButtons/>
           </Route>
