@@ -6,5 +6,5 @@ React
 
 #### Tools
 
-firebase
-swipecards
+- firebase
+- swipecards
